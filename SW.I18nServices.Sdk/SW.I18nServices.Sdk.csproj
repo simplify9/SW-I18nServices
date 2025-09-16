@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>SimplyWorks.I18n.Sdk</PackageId>
     <Authors>Simplify9</Authors>
     <Product>SimplyWorks.I18n</Product>
@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SimplyWorks.HttpExtensions" Version="2.0.3" />
+    <PackageReference Include="SimplyWorks.HttpExtensions" Version="8.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="../icon.png">
