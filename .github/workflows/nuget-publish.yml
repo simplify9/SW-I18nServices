@@ -34,7 +34,7 @@ jobs:
       - name: Pack and Push NuGet Package
         uses: simplify9/.github/.github/actions/dotnet-pack-push@main
         with:
-          projects: "SW.I18nServices.Service/SW.I18nServices.Service.csproj"
+          projects: "SW.I18nServices.Service/SW.I18nServices.Service.csproj SW.I18nServices.Sdk/SW.I18nServices.Sdk.csproj"
           configuration: "Release"
           version: ${{ steps.semver.outputs.version }}
           api-key: ${{ secrets.SWNUGETKEY }}
