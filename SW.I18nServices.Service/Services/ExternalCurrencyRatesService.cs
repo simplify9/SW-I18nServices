@@ -19,7 +19,7 @@ namespace SW.I18nService
             this.i18NOptions = i18NOptions;
         }
 
-        async public Task<CurrencyRates> GetRates()
+        public async Task<CurrencyRates> GetRates()
         {
             var httpResponseMessage = await httpClient.GetAsync($"{i18NOptions.CurrencyRatesUrl}&base={i18NOptions.BaseCurrency}");
             httpResponseMessage.EnsureSuccessStatusCode();

@@ -50,7 +50,7 @@ namespace SW.I18nService
             return false;
         }
 
-        async public Task<decimal> ConvertAsync(decimal value, string fromCurrency, string toCurrency)
+        public async Task<decimal> ConvertAsync(decimal value, string fromCurrency, string toCurrency)
         {
             if (fromCurrency.Equals(toCurrency, StringComparison.OrdinalIgnoreCase))
                 return value;
@@ -69,7 +69,7 @@ namespace SW.I18nService
                 return 0;
         }
 
-        async private Task<CurrencyRates> FetchRatesAsync()
+        private async Task<CurrencyRates> FetchRatesAsync()
         {
             if (memoryCache.TryGetValue("currency_rates", out CurrencyRates rates))
                 return rates;

@@ -12,7 +12,7 @@ namespace SW.I18nService
         {
             var assembly = typeof(I18nServiceService).Assembly;
             var cntryds = assembly.GetManifestResourceStream("SW.I18nServices.Service.Data.country.bin");
-            var manifestress = assembly.GetManifestResourceNames();
+            assembly.GetManifestResourceNames();
             cntryd = new Dictionary<string, Country>(cntryds.AsDictionary<Country>(), StringComparer.OrdinalIgnoreCase);
             
         }
@@ -22,15 +22,15 @@ namespace SW.I18nService
             return cntryd.Values; 
         }
 
-        public Country Get(string CountryCode)
+        public Country Get(string countryCode)
         {
-            cntryd.TryGetValue(CountryCode, out var c);
+            cntryd.TryGetValue(countryCode, out var c);
             return c;
         }
 
-        public bool TryGet(string CountryCode, out Country country)
+        public bool TryGet(string countryCode, out Country country)
         {
-            if (cntryd.TryGetValue(CountryCode, out country)) return true;
+            if (cntryd.TryGetValue(countryCode, out country)) return true;
             return false;
         }
 
