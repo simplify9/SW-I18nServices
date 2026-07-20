@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SimplyWorks.HttpExtensions" Version="8.1.0" />
+    <PackageReference Include="SimplyWorks.HttpExtensions" Version="8.1.6" />
   </ItemGroup>
   <ItemGroup>
     <None Include="../icon.png">
